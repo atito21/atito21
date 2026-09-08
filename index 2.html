@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тенти и Ветроупорни Завеси — Монтаж на мярка | Варна и Разград</title>
+<meta name="description" content="Изработка и монтаж на ветроупорни завеси и тенти на мярка. Обслужваме област Варна и област Разград. Изчислете ориентировъчна цена онлайн.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14213D;
+    --ink-2:#1B2C52;
+    --canvas:#EDE9DD;
+    --canvas-2:#F7F5EE;
+    --charcoal:#1F2421;
+    --rust:#A0522D;
+    --rust-2:#8A4526;
+    --amber:#E8871E;
+    --amber-2:#CE7413;
+    --steel:#6B7280;
+    --white:#FAF8F3;
+    --line:rgba(250,248,243,0.22);
+    --line-dark:rgba(20,33,61,0.14);
+    --radius:10px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--charcoal);
+    background:var(--canvas-2);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Archivo',sans-serif;
+    font-weight:800;
+    line-height:1.1;
+    margin:0 0 .4em;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;background:none;border:none;padding:0;color:inherit;text-align:inherit;font-size:inherit;}
+
+  /* ===== NAV ===== */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(20,33,61,0.96);
+    backdrop-filter:blur(6px);
+    color:var(--white);
+    border-bottom:1px solid var(--line);
+  }
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .brand{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.02em;text-decoration:none;color:var(--white);white-space:nowrap;}
+  .brand small{display:block;font-family:'Inter';font-weight:500;font-size:.62rem;letter-spacing:.14em;color:var(--amber);text-transform:uppercase;}
+  .nav-links{display:none;gap:28px;font-size:.92rem;font-weight:500;}
+  .nav-links a{text-decoration:none;opacity:.85;transition:opacity .15s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--amber);color:var(--ink);
+    padding:9px 16px;border-radius:999px;
+    font-weight:700;font-size:.85rem;text-decoration:none;
+    white-space:nowrap;
+  }
+  @media(min-width:820px){.nav-links{display:flex;}}
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(1100px 500px at 15% -10%, rgba(232,135,30,0.14), transparent 60%),
+      linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
+    padding:56px 0 40px;
+  }
+  .hero-grid{
+    position:absolute;inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size:34px 34px;
+    opacity:.35;
+    mask-image:linear-gradient(180deg, transparent, black 20%, black 75%, transparent);
+  }
+  .hero .wrap{position:relative;display:grid;gap:36px;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--amber);margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:18px;height:1px;background:var(--amber);}
+  .hero h1{font-size:clamp(1.9rem,5.4vw,2.7rem);max-width:19ch;}
+  .hero h1 em{font-style:normal;color:var(--amber);}
+  .hero p{max-width:46ch;color:rgba(250,248,243,0.78);font-size:1.02rem;margin:0 0 26px;}
+  .btn-row{display:flex;flex-wrap:wrap;gap:12px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 22px;border-radius:8px;
+    font-weight:700;font-size:.95rem;text-decoration:none;border:1px solid transparent;
+    transition:transform .12s ease, background .15s;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--amber);color:var(--ink);}
+  .btn-primary:hover{background:var(--amber-2);}
+  .btn-outline{border-color:var(--line);color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,0.06);}
+
+  .hero-diagram{
+    position:relative;
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px;
+  }
+  .hero-diagram svg{width:100%;height:auto;display:block;}
+  .diagram-caption{
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;
+    margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:rgba(250,248,243,0.6);
+  }
+  @media(min-width:900px){
+    .hero .wrap{grid-template-columns:1.1fr .9fr;align-items:center;}
+  }
+
+  /* ===== TRUST STRIP ===== */
+  .trust{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .trust .wrap{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:18px;
+    padding:22px 20px;color:var(--white);
+  }
+  .trust-item{font-size:.82rem;color:rgba(250,248,243,0.75);}
+  .trust-item b{display:block;font-family:'IBM Plex Mono',monospace;font-size:1.15rem;color:var(--amber);font-weight:600;}
+  @media(min-width:700px){.trust .wrap{grid-template-columns:repeat(4,1fr);}}
+
+  /* ===== SECTION GENERIC ===== */
+  section{padding:64px 0;}
+  .section-head{max-width:640px;margin:0 0 36px;}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--rust);margin-bottom:10px;display:block;
+  }
+  .section-head h2{font-size:clamp(1.5rem,4vw,2.1rem);color:var(--ink);}
+  .section-head p{color:var(--steel);font-size:.98rem;max-width:52ch;}
+
+  /* ===== GALLERY ===== */
+  .gallery{background:var(--white);}
+  .gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .gal-card{
+    aspect-ratio:4/3;border-radius:var(--radius);
+    background:
+      repeating-linear-gradient(135deg, rgba(20,33,61,0.06) 0 14px, rgba(20,33,61,0.03) 14px 28px),
+      var(--canvas);
+    border:1px dashed rgba(20,33,61,0.25);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;
+    padding:16px;text-align:center;
+  }
+  .gal-card span{font-size:.78rem;color:var(--steel);font-family:'IBM Plex Mono',monospace;}
+  .gal-card svg{width:30px;height:30px;color:var(--rust);opacity:.6;}
+  @media(min-width:640px){.gal-grid{grid-template-columns:repeat(4,1fr);}}
+
+  /* ===== HOW IT WORKS ===== */
+  .how{background:var(--canvas);}
+  .how-grid{display:grid;gap:22px;}
+  .how-card{
+    background:var(--white);border-radius:var(--radius);padding:24px;
+    border:1px solid rgba(20,33,61,0.08);
+    position:relative;
+  }
+  .how-num{
+    font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:.78rem;
+    color:var(--amber-2);background:rgba(232,135,30,0.12);
+    display:inline-flex;padding:3px 9px;border-radius:5px;margin-bottom:12px;
+  }
+  .how-card h3{font-size:1.05rem;color:var(--ink);margin-bottom:6px;}
+  .how-card p{font-size:.9rem;color:var(--steel);margin:0;}
+  @media(min-width:820px){
+    .how-grid{grid-template-columns:repeat(3,1fr);}
+    .how-card-wide{grid-column:1 / -1;}
+  }
+  .measure-options{display:grid;gap:12px;margin-top:10px;}
+  @media(min-width:640px){.measure-options{grid-template-columns:1fr 1fr;}}
+  .measure-opt{
+    background:var(--canvas);border-radius:8px;padding:14px 16px;
+    border-left:3px solid var(--rust);
+  }
+  .measure-opt:last-child{border-left-color:var(--amber-2);}
+  .measure-opt p{font-size:.86rem;color:var(--steel);margin:0;line-height:1.55;}
+  .measure-tag{
+    display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--rust);
+    margin-bottom:6px;font-weight:600;
+  }
+  .measure-tag-alt{color:var(--amber-2);}
+
+  /* ===== CALCULATOR ===== */
+  .calc{background:var(--ink);color:var(--white);}
+  .calc .section-head p{color:rgba(250,248,243,0.65);}
+  .calc .kicker{color:var(--amber);}
+  .calc-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid var(--line);
+    border-radius:14px;
+    overflow:hidden;
+  }
+  .calc-grid{display:grid;align-items:start;}
+  @media(min-width:900px){.calc-grid{grid-template-columns:1fr 1fr;}}
+
+  .calc-form{padding:18px;border-bottom:1px solid var(--line);}
+  @media(min-width:900px){.calc-form{border-bottom:none;border-right:1px solid var(--line);}}
+
+  .field{margin-bottom:9px;}
+  .field label{
+    display:block;font-size:.72rem;font-weight:600;
+    text-transform:uppercase;letter-spacing:.04em;
+    color:rgba(250,248,243,0.65);margin-bottom:3px;
+  }
+  .field-row .field label, .field-row3 .field label{min-height:2rem;}
+  .field input, .field select{
+    width:100%;padding:7px 10px;border-radius:6px;
+    border:1px solid var(--line);background:rgba(255,255,255,0.04);
+    color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:.9rem;
+  }
+  .field select{font-family:'Inter',sans-serif;}
+  .color-select-wrap{position:relative;}
+  .color-select-wrap select.has-swatch{padding-left:42px;}
+  #color-swatch{
+    position:absolute;left:11px;top:50%;transform:translateY(-50%);
+    width:16px;height:16px;border-radius:5px;
+    border:1px solid rgba(255,255,255,0.35);
+    background:#A0522D;pointer-events:none;z-index:1;
+  }
+  #color-swatch.is-camo{
+    background-image:linear-gradient(45deg,#556b2f 25%,#4a3b2a 25%,#4a3b2a 50%,#556b2f 50%,#556b2f 75%,#4a3b2a 75%);
+    background-size:8px 8px;
+  }
+  .field input:focus, .field select:focus{outline:2px solid var(--amber);outline-offset:1px;}
+  .field input[type="number"]::-webkit-inner-spin-button,
+  .field input[type="number"]::-webkit-outer-spin-button{
+    filter:invert(1) brightness(1.8);opacity:.85;cursor:pointer;
+  }
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+  .field-row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;}
+  .toggle-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:9px;}
+  .toggle-row label{
+    display:flex;align-items:center;gap:7px;
+    font-size:.82rem;font-family:'Inter';color:rgba(250,248,243,0.8);
+    background:rgba(255,255,255,0.04);border:1px solid var(--line);
+    padding:6px 10px;border-radius:6px;cursor:pointer;
+  }
+  .toggle-row input[type="checkbox"]{
+    appearance:none;-webkit-appearance:none;
+    width:18px;height:18px;min-width:18px;border-radius:50%;
+    border:2px solid rgba(250,248,243,0.4);
+    position:relative;margin:0;cursor:pointer;background:transparent;
+    flex-shrink:0;
+  }
+  .toggle-row input[type="checkbox"]:checked{border-color:var(--amber);}
+  .toggle-row input[type="checkbox"]:checked::after{
+    content:"";position:absolute;top:50%;left:50%;
+    width:8px;height:8px;border-radius:50%;
+    background:var(--amber);transform:translate(-50%,-50%);
+  }
+  .hidden{display:none !important;}
+
+  .calc-preview{padding:26px;display:flex;flex-direction:column;}
+  .preview-box{
+    background:rgba(255,255,255,0.03);border:1px solid var(--line);border-radius:var(--radius);padding:14px;
+    display:flex;align-items:center;justify-content:center;min-height:440px;
+  }
+  .preview-box svg{width:100%;height:auto;max-height:680px;}
+  .price-panel{
+    margin-top:20px;padding:18px;border-radius:10px;
+    background:rgba(232,135,30,0.1);border:1px solid rgba(232,135,30,0.35);
+  }
+  .price-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--amber);margin-bottom:6px;}
+  .price-value{font-family:'IBM Plex Mono',monospace;font-size:1.7rem;font-weight:600;color:var(--white);}
+  .price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .qty-mini{width:74px;flex-shrink:0;}
+  .qty-mini label{
+    display:block;font-size:.68rem;font-weight:600;text-transform:uppercase;
+    letter-spacing:.04em;color:rgba(250,248,243,0.6);margin-bottom:3px;text-align:center;
+  }
+  .qty-mini input{
+    width:100%;padding:7px 6px;border-radius:6px;text-align:center;
+    border:1px solid var(--line);background:rgba(255,255,255,0.06);
+    color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:.95rem;
+  }
+  .qty-mini input:focus{outline:2px solid var(--amber);outline-offset:1px;}
+  .qty-mini input::-webkit-inner-spin-button,
+  .qty-mini input::-webkit-outer-spin-button{
+    filter:invert(1) brightness(1.8);opacity:.85;cursor:pointer;
+  }
+  .price-value small{font-size:.9rem;font-weight:500;color:rgba(250,248,243,0.6);}
+  .price-note{font-size:.78rem;color:rgba(250,248,243,0.55);margin-top:8px;line-height:1.5;}
+  .calc-caption{border-top-color:var(--line);color:rgba(250,248,243,0.55);margin-top:12px;}
+  .calc-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .calc-actions .btn{flex:1;justify-content:center;min-width:160px;}
+
+  /* ===== SERVICE AREA ===== */
+  .area{background:var(--white);}
+  .area-grid{display:grid;gap:16px;}
+  @media(min-width:700px){.area-grid{grid-template-columns:1fr 1fr;}}
+  .area-card{
+    border:1px solid rgba(20,33,61,0.1);border-radius:var(--radius);
+    padding:24px;background:var(--canvas-2);
+  }
+  .area-card.active{border-color:var(--rust);background:#FBF1EC;}
+  .area-card h3{color:var(--ink);font-size:1.15rem;margin-bottom:4px;}
+  .area-card .region-tag{font-family:'IBM Plex Mono',monospace;font-size:.72rem;color:var(--rust);text-transform:uppercase;letter-spacing:.08em;}
+  .phone-link{
+    display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+    font-family:'IBM Plex Mono',monospace;font-size:1.05rem;font-weight:600;
+    color:var(--white);text-decoration:none;
+    background:var(--rust);padding:12px 16px;border-radius:8px;
+    transition:all 0.2s;cursor:pointer;
+  }
+  .phone-link:active{
+    transform:scale(0.98);opacity:0.9;
+  }
+  .phone-link svg{width:18px;height:18px;color:var(--rust);}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--ink);color:rgba(250,248,243,0.6);padding:40px 0 26px;}
+  .foot-grid{display:grid;gap:24px;margin-bottom:26px;}
+  @media(min-width:700px){.foot-grid{grid-template-columns:2fr 1fr 1fr;}}
+  footer h4{color:var(--white);font-family:'Archivo';font-size:.95rem;margin-bottom:10px;}
+  footer p, footer a{font-size:.85rem;line-height:1.7;}
+  footer a{text-decoration:none;color:rgba(250,248,243,0.6);}
+  footer a:hover{color:var(--amber);}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:18px;font-size:.75rem;font-family:'IBM Plex Mono',monospace;}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="wrap">
+    <button type="button" data-target="top" class="brand">ТЕНТИ&nbsp;И&nbsp;ЗАВЕСИ<small>Област Варна · Област Разград</small></button>
+    <div class="nav-links">
+      <button type="button" data-target="calc">Калкулатор</button>
+      <button type="button" data-target="how">Как работим</button>
+      <button type="button" data-target="gallery">Обекти</button>
+      <button type="button" data-target="contact">Контакти</button>
+    </div>
+    <button type="button" data-target="contact" class="nav-cta">Заяви оферта</button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Вземане на размери · Изработка · Монтаж</span>
+      <h1>Ветроупорни завеси и тенти, скроени за <em>вашата тераса, двор или беседка</em></h1>
+      <p>Защита от вятър, дъжд, сняг и слънце за дома или бизнеса ви. Изчисляваме, изработваме и монтираме на място.</p>
+      <div class="btn-row">
+        <button type="button" data-target="calc" class="btn btn-primary">Изчисли цена</button>
+        <button type="button" data-target="gallery" class="btn btn-outline">Виж наши обекти</button>
+      </div>
+    </div>
+    <div class="hero-diagram">
+      <svg viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="60" y="30" width="200" height="150" rx="2" stroke="#E8871E" stroke-width="1.5" fill="rgba(232,135,30,0.06)"/>
+        <rect x="60" y="30" width="200" height="7" fill="#A0522D"/>
+        <rect x="60" y="30" width="7" height="150" fill="#A0522D"/>
+        <rect x="253" y="30" width="7" height="150" fill="#A0522D"/>
+        <line x1="60" y1="18" x2="260" y2="18" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+        <line x1="60" y1="12" x2="60" y2="24" stroke="#FAF8F3" stroke-opacity="0.5"/>
+        <line x1="260" y1="12" x2="260" y2="24" stroke="#FAF8F3" stroke-opacity="0.5"/>
+        <text x="160" y="12" fill="#FAF8F3" fill-opacity="0.7" font-size="10" font-family="IBM Plex Mono, monospace" text-anchor="middle">ширина</text>
+        <line x1="46" y1="30" x2="46" y2="180" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+        <line x1="40" y1="30" x2="52" y2="30" stroke="#FAF8F3" stroke-opacity="0.5"/>
+        <line x1="40" y1="180" x2="52" y2="180" stroke="#FAF8F3" stroke-opacity="0.5"/>
+        <text x="20" y="108" fill="#FAF8F3" fill-opacity="0.7" font-size="10" font-family="IBM Plex Mono, monospace" text-anchor="middle" transform="rotate(-90 20 108)">височина</text>
+        <circle cx="70" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="100" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="130" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="160" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="190" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="220" cy="35" r="2.2" fill="#A0522D"/>
+        <circle cx="250" cy="35" r="2.2" fill="#A0522D"/>
+        <rect x="60" y="151.5" width="200" height="28.5" fill="#A0522D"/>
+      </svg>
+      <div class="diagram-caption">
+        <span>КРИСТАЛ</span>
+        <span>КАНТ</span>
+        <span>ОБКОВ</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Реализирани обекти</span>
+      <h2>Как изглежда работата ни</h2>
+      <p>Снимки от реални монтажи — тераси, ресторанти и дворове, защитени с наши завеси.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1vefSvq56hYq6LCmWJdJaz5zlhO_7ajjT" alt="Монтаж 1" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Варна - Завеси с цялофан</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=17BiLFM305as8M4g0XQ8o5BFgicnG4gG-" alt="Монтаж 2" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Разград - Ветроупорни завеси</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1IPLHShul4AKSZ6CAQYEvhsi5hHJ2o4bB" alt="Монтаж 3" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Защита на тераса</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1aPTyjk3rsn17laxbXGa_RxykgjVBdyut" alt="Монтаж 4" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Ресторант с прозрачни завеси</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1V0aLiYkqUOjt0RsG16W-EY4DGC_-4H3m" alt="Монтаж 5" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Комбинирана защита</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1zFVXwc-tLSscdM1FSr3uKTRT9a-kc6HN" alt="Монтаж 6" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Магазин с червена фасция</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1UR7IT_m7Z_lGKuqCvsYMI9rhWMVXBrZA" alt="Монтаж 7" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Раздвижни завеси</span>
+      </div>
+      <div class="gal-card">
+        <img src="https://drive.google.com/uc?export=view&id=1_DT-ZqHtSh6bQbfXtzl5mu-kVmGq1CcQ" alt="Монтаж 8" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);">
+        <span>Прозрачни завеси със синя тента</span>
+      </div>
+    </div>
+      <div class="gal-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+        <span>Снимка от обект №2</span>
+      </div>
+      <div class="gal-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+        <span>Снимка от обект №3</span>
+      </div>
+      <div class="gal-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg>
+        <span>Снимка от обект №4</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Процесът</span>
+      <h2>Три стъпки до готова завеса</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card how-card-wide">
+        <span class="how-num">01</span>
+        <h3>Вземане на размер</h3>
+        <p>Работим по два начина:</p>
+        <div class="measure-options">
+          <div class="measure-opt">
+            <span class="measure-tag">Ние замерваме</span>
+            <p>Идваме на място, вземаме точните размери и монтираме готовите завеси.</p>
+          </div>
+          <div class="measure-opt">
+            <span class="measure-tag measure-tag-alt">Вие ни давате размери</span>
+            <p>Изработваме по ваши размери — без монтаж.</p>
+          </div>
+        </div>
+      </div>
+      <div class="how-card">
+        <span class="how-num">02</span>
+        <h3>Изработка</h3>
+        <p>Всяка завеса се кроява индивидуално според точните размери.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-num">03</span>
+        <h3>Монтаж</h3>
+        <p>Екипът ни монтира готовите завеси на място.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CALCULATOR ===== -->
+<section class="calc" id="calc">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Онлайн калкулатор</span>
+      <h2>Изчислете ориентировъчна цена</h2>
+      <p>Въведете размерите на вашата завеса, за да получите приблизителна цена. Точната сума потвърждаваме лично преди поръчка.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="calc-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="f-width">Ширина (см)</label>
+              <input type="number" id="f-width" value="300" min="50" max="600" step="1">
+            </div>
+            <div class="field" id="height-single-wrap">
+              <label for="f-height">Височина (см)</label>
+              <input type="number" id="f-height" value="252" min="50" max="400" step="1">
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <label><input type="checkbox" id="f-diff-heights"> Завесата има различни височини</label>
+          </div>
+          <div class="field-row hidden" id="height-diff-wrap">
+            <div class="field">
+              <label for="f-height-left">Височина ляво (см)</label>
+              <input type="number" id="f-height-left" value="252" min="50" max="400" step="1">
+            </div>
+            <div class="field">
+              <label for="f-height-right">Височина дясно (см)</label>
+              <input type="number" id="f-height-right" value="230" min="50" max="400" step="1">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-thickness">Дебелина на кристала</label>
+              <select id="f-thickness">
+                <option value="0.6">0.6 мм</option>
+                <option value="0.8" selected>0.8 мм</option>
+                <option value="1.0">1.0 мм</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-color">Цвят на канта</label>
+              <div class="color-select-wrap">
+                <span id="color-swatch"></span>
+                <select id="f-color" class="has-swatch">
+                  <option value="#A0522D" selected>Кафяв</option>
+                  <option value="#FFE4C4">Бежов</option>
+                  <option value="#FFFFFF">Бял</option>
+                  <option value="#000000">Черен</option>
+                  <option value="#228B22">Зелен</option>
+                  <option value="#A9A9A9">Сив</option>
+                  <option value="#D3D3D3">Сребрист</option>
+                  <option value="#FF0000">Червен</option>
+                  <option value="#0000FF">Син</option>
+                  <option value="#00BFFF">Светло син</option>
+                  <option value="#FFFF00">Жълт</option>
+                  <option value="#FFA500">Оранж</option>
+                  <option value="#464E53">Сив антрацит</option>
+                  <option value="CAMO">Камуфлаж</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-top">Закрепване горе</label>
+              <select id="f-top">
+                <option value="none">Без обков</option>
+                <option value="buttons" selected>Въртящи копчета</option>
+                <option value="rope">Кръгъл за привързване</option>
+                <option value="wood">Правоъгълен за дърво</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-side">Странично</label>
+              <select id="f-side">
+                <option value="none">Без обков</option>
+                <option value="buttons" selected>Въртящи копчета</option>
+                <option value="rope">Кръгъл за привързване</option>
+                <option value="wood">Правоъгълен за дърво</option>
+                <option value="zip">Цип</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row3">
+            <div class="field">
+              <label for="f-border-top">Кант отгоре (см)</label>
+              <input type="number" id="f-border-top" value="10" min="0" max="30" step="1">
+            </div>
+            <div class="field">
+              <label for="f-border-left">Кант ляво (см)</label>
+              <input type="number" id="f-border-left" value="10" min="0" max="30" step="1">
+            </div>
+            <div class="field">
+              <label for="f-border-right">Кант дясно (см)</label>
+              <input type="number" id="f-border-right" value="10" min="0" max="30" step="1">
+            </div>
+          </div>
+
+          <div class="toggle-row">
+            <label><input type="checkbox" id="f-auto-apron" checked> Автоматична престилка</label>
+          </div>
+          <div class="field hidden" id="apron-field-wrap">
+            <label for="f-apron">Престилка (см)</label>
+            <input type="number" id="f-apron" value="48" min="0" max="80" step="1">
+          </div>
+
+          <div class="toggle-row">
+            <label><input type="checkbox" id="f-door1"> Врата с 1 цип</label>
+            <label><input type="checkbox" id="f-door2"> Врата с 2 ципа</label>
+          </div>
+          <div class="field-row hidden" id="door-pos-wrap">
+            <div class="field">
+              <label for="f-door-left">От ляво (см)</label>
+              <input type="number" id="f-door-left" value="100" min="0" max="600" step="1">
+            </div>
+            <div class="field hidden" id="door-width-wrap">
+              <label for="f-door-width">От дясно (см)</label>
+              <input type="number" id="f-door-width" value="100" min="0" max="600" step="1">
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-preview">
+          <div class="preview-box">
+            <svg id="preview-svg" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg"></svg>
+          </div>
+          <div class="diagram-caption calc-caption">
+            <span id="cap-thickness">КРИСТАЛ 0.8 ММ</span>
+            <span id="cap-kant">КАНТ · КАФЯВ</span>
+            <span id="cap-hardware">ОБКОВ: КОПЧЕТА</span>
+          </div>
+          <div class="price-panel">
+            <div class="price-row">
+              <div>
+                <div class="price-label">Ориентировъчна цена</div>
+                <div class="price-value"><span id="price-bgn">—</span> лв <small id="price-eur">(— €)</small></div>
+              </div>
+              <div class="qty-mini">
+                <label for="f-qty">Брой</label>
+                <input type="number" id="f-qty" value="1" min="1" max="20" step="1">
+              </div>
+            </div>
+            <p class="price-note">Изчислено по приблизителна методика на база размер, дебелина и обков. Финалната цена се потвърждава от нас преди поръчка — може да варира с ±10–15%, особено при по-малки размери.</p>
+          </div>
+          <div class="calc-actions">
+            <button type="button" data-target="contact" class="btn btn-primary">Обади се</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE AREA ===== -->
+<section class="area" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Контакти</span>
+      <h2>Изберете вашата област</h2>
+      <p>Обслужваме два региона с отделни телефони за по-бърза връзка с нашия екип на място.</p>
+    </div>
+    <div class="area-grid">
+      <div class="area-card active" id="area-varna">
+        <span class="region-tag">Област Варна</span>
+        <h3>Варна и региона</h3>
+        <a href="tel:+359890919077" class="phone-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0890 919 077
+        </a>
+      </div>
+      <div class="area-card" id="area-razgrad">
+        <span class="region-tag">Област Разград</span>
+        <h3>Разград и региона</h3>
+        <a href="tel:+359898555861" class="phone-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0898 555 861
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Тенти и Завеси</h4>
+        <p>Изработка и монтаж на ветроупорни завеси и тенти за област Варна и област Разград.</p>
+      </div>
+      <div>
+        <h4>Бързи връзки</h4>
+        <p><button type="button" data-target="calc">Калкулатор</button><br><button type="button" data-target="gallery">Обекти</button><br><button type="button" data-target="how">Как работим</button></p>
+      </div>
+      <div>
+        <h4>Контакт</h4>
+        <p><a href="tel:+359890919077">Варна: 0890 919 077</a><br><a href="tel:+359898555861">Разград: 0898 555 861</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">© <span id="year"></span> Тенти и Завеси. Всички права запазени.</div>
+  </div>
+</footer>
+
+<script>
+// ==========================================================================
+// КОНФИГУРАЦИЯ НА ЦЕНИТЕ — редактирай тук когато получиш точните тарифи
+// ==========================================================================
+const PRICE_CONFIG = {
+  // лв / линеен метър от рулото, според дебелината
+  rollPricePerMeter: { "0.6": 6.14, "0.8": 7.15, "1.0": 9.20 },
+  // ширина на рулото в метри, според дебелината (0.6мм = по-тясно руло)
+  rollWidth: { "0.6": 1.6, "0.8": 2.0, "1.0": 2.0 },
+  brezentPricePerM2: 22,         // лв / м² брезент (за кант и престилка)
+  eyeletUnitPrice: 0.77,         // лв / едно обково с копче (пръстен + копче)
+  ropeUnitPrice: 0.22,           // лв / едно обково само с пръстен (връзване с въже)
+  woodUnitPrice: 0.9,            // лв / едно правоъгълно обково за дърво
+  eyeletSpacing: 0.35,           // м между обковите
+  apronStrapPrice: 1.28,
+  apronStrapCount: 4,
+  zipOnePrice: 45,               // лв доплащане за врата с 1 цип
+  zipTwoPrice: 68,               // лв доплащане за врата с 2 ципа
+  sideZipPricePerMeter: 30,      // лв / линеен метър страничен цип (вместо копчета)
+  weldSurchargePerMeter: 6,      // лв / линеен метър (ширина) допълнителен труд за заваръчен шев
+  markupMultiplier: 2.44,        // марж/труд/ДДС спрямо суровата цена на материалите
+  eurRate: 1.95583
+};
+
+const COLOR_NAMES = {
+  "#A0522D": "Кафяв", "#FFE4C4": "Бежов", "#FFFFFF": "Бял", "#000000": "Черен",
+  "#228B22": "Зелен", "#A9A9A9": "Сив", "#D3D3D3": "Сребрист", "#FF0000": "Червен",
+  "#0000FF": "Син", "#00BFFF": "Светло син", "#FFFF00": "Жълт", "#FFA500": "Оранж",
+  "#464E53": "Сив антрацит", "CAMO": "Камуфлаж"
+};
+
+// Ако видимият кристал (височина - кант отгоре - престилка) е по-голям от
+// топа на рулото (200см за 0.8/1.0мм, 160см за 0.6мм), се налага заваръчен
+// шев между два кристала — тук изчисляваме дали и къде.
+function weldInfo(p){
+  const topaCm = PRICE_CONFIG.rollWidth[p.thickness]*100;
+  const kristalVisible = Math.max(0, p.height - p.borderTop - p.apron);
+  if(kristalVisible > topaCm){
+    return { needsWeld:true, extraCm: kristalVisible-topaCm, seamFromTopCm: p.borderTop + topaCm };
+  }
+  return { needsWeld:false, extraCm:0, seamFromTopCm:0 };
+}
+
+function computePrice(p){
+  const W = p.width/100, H = p.height/100;
+  const topB = p.borderTop/100, leftB = p.borderLeft/100, rightB = p.borderRight/100;
+  const apronM = p.apron/100;
+
+  const rollW = PRICE_CONFIG.rollWidth[p.thickness];
+  const strips = Math.max(1, Math.ceil(W/rollW));
+  const runningLength = strips*H;
+  const materialCost = runningLength * PRICE_CONFIG.rollPricePerMeter[p.thickness];
+
+  // кант (брезент лента) — цена спрямо реалната му ширина от полетата
+  const kantCost = (W*topB + H*leftB + H*rightB) * PRICE_CONFIG.brezentPricePerM2;
+  // престилка (брезент, плътна, долу)
+  const apronFabricCost = W*apronM * PRICE_CONFIG.brezentPricePerM2;
+  const apronStrapCost = PRICE_CONFIG.apronStrapCount * PRICE_CONFIG.apronStrapPrice;
+
+  let hardwareCost = 0;
+  if(p.top === 'buttons'){
+    const topCount = Math.round(W/PRICE_CONFIG.eyeletSpacing)+1;
+    hardwareCost += topCount * PRICE_CONFIG.eyeletUnitPrice;
+  } else if(p.top === 'rope'){
+    const topCount = Math.round(W/PRICE_CONFIG.eyeletSpacing)+1;
+    hardwareCost += topCount * PRICE_CONFIG.ropeUnitPrice;
+  } else if(p.top === 'wood'){
+    const topCount = Math.round(W/PRICE_CONFIG.eyeletSpacing)+1;
+    hardwareCost += topCount * PRICE_CONFIG.woodUnitPrice;
+  }
+  if(p.side === 'buttons'){
+    const sideCount = (Math.round(H/PRICE_CONFIG.eyeletSpacing)+1)*2;
+    hardwareCost += sideCount * PRICE_CONFIG.eyeletUnitPrice;
+  } else if(p.side === 'rope'){
+    const sideCount = (Math.round(H/PRICE_CONFIG.eyeletSpacing)+1)*2;
+    hardwareCost += sideCount * PRICE_CONFIG.ropeUnitPrice;
+  } else if(p.side === 'wood'){
+    const sideCount = (Math.round(H/PRICE_CONFIG.eyeletSpacing)+1)*2;
+    hardwareCost += sideCount * PRICE_CONFIG.woodUnitPrice;
+  } else if(p.side === 'zip'){
+    hardwareCost += H * PRICE_CONFIG.sideZipPricePerMeter * 2;
+  }
+
+  // допълнителен материал + труд, ако трябва заваръчен шев между два кристала
+  const weld = weldInfo(p);
+  let weldCost = 0;
+  if(weld.needsWeld){
+    const extraRunningLength = strips * (weld.extraCm/100);
+    weldCost = extraRunningLength * PRICE_CONFIG.rollPricePerMeter[p.thickness] + W*PRICE_CONFIG.weldSurchargePerMeter;
+  }
+
+  let raw = materialCost + kantCost + apronFabricCost + apronStrapCost + hardwareCost + weldCost;
+  let total = raw * PRICE_CONFIG.markupMultiplier;
+
+  if(p.door1) total += PRICE_CONFIG.zipOnePrice;
+  if(p.door2) total += PRICE_CONFIG.zipTwoPrice;
+
+  total *= p.qty;
+  return total;
+}
+
+function drawPreview(p){
+  const svg = document.getElementById('preview-svg');
+  const maxW = 222, maxH = 195, padX = 42, padY = 34;
+
+  const hMaxCm = p.diffHeights ? Math.max(p.heightLeft, p.heightRight) : p.height;
+  const w = Math.min(maxW, maxH * p.width / hMaxCm);
+  const px = w / p.width; // px за 1 см (еднакво по X и Y, запазено съотношение)
+  const hLeft = p.diffHeights ? p.heightLeft*px : hMaxCm*px;
+  const hRight = p.diffHeights ? p.heightRight*px : hMaxCm*px;
+  const hMax = Math.max(hLeft, hRight); // = hMaxCm*px, гарантирано <= maxH
+  const hMin = Math.min(hLeft, hRight); // по-късата страна — canт/престилка не бива да я "изядат"
+  const x0 = padX + (maxW-w)/2, y0 = padY + (maxH-hMax)/2;
+
+  const bandTop = Math.min(p.borderTop*px, hMin*0.35);
+  const bandLeft = Math.min(p.borderLeft*px, w*0.35);
+  const bandRight = Math.min(p.borderRight*px, w*0.35);
+  let apronH = Math.min(Math.max(p.apron*px, 0), hMin*0.5);
+  // остави поне малко видим кристал на по-късата страна дори при екстремни стойности
+  if(bandTop + apronH > hMin*0.9) apronH = Math.max(0, hMin*0.9 - bandTop);
+
+  // Долният край е равен (прав ъгъл долу), горният следва наклона
+  const bottomY = y0 + hMax;
+  const topLeftY = bottomY - hLeft;
+  const topRightY = bottomY - hRight;
+  const avgTopY = (topLeftY+topRightY)/2;
+
+  // локален връх на завесата (по наклона) при дадено x — ползва се за да следват
+  // канта/обковите/циповете наклона плавно, без прекъсвания
+  function localTopAt(x){
+    const t = Math.max(0, Math.min(1, (x-x0)/w));
+    return topLeftY + (topRightY-topLeftY)*t;
+  }
+
+  // При врата/цип ЗАЕДНО с различни височини — горният кант е клин: тръгва
+  // от наклонения връх и слиза до права хоризонтална линия (10см над късата
+  // страна), за да могат циповете да вървят под прав ъгъл, не по наклона.
+  const hasZipFeature = p.door1 || p.door2 || p.side === 'zip';
+  const shortTopY = Math.max(topLeftY, topRightY); // връх на по-късата страна
+  const doorTopY = shortTopY + bandTop;
+  const useFlatTop = hasZipFeature && p.diffHeights;
+  const innerLeftX = x0+bandLeft, innerRightX = x0+w-bandRight;
+  // ВАЖНО: измерваме bandTop от РЕАЛНИЯ локален връх на наклона в X позицията
+  // на всеки вътрешен ъгъл (не от върха при x0/x0+w) — иначе при широк кант
+  // и стръмен наклон вътрешният ъгъл "изскача" извън външния контур.
+  const innerTopL = useFlatTop ? doorTopY : localTopAt(innerLeftX)+bandTop;
+  const innerTopR = useFlatTop ? doorTopY : localTopAt(innerRightX)+bandTop;
+  const innerBottomY = bottomY - apronH;
+  const fillC = p.color==='CAMO' ? 'url(#camoPattern)' : p.color;
+  const strokeC = p.color==='CAMO' ? '#5A6B3C' : p.color;
+
+  // маркер за обков: елипса (копче), кръгла дупка (въже) или квадрат (за дърво)
+  function hwMarker(cx, cy, type, rot){
+    if(type==='buttons'){
+      const rx=2.6, ry=1.4;
+      const tr = rot ? ` transform="rotate(90 ${cx.toFixed(1)} ${cy.toFixed(1)})"` : '';
+      return `<ellipse cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" rx="${rx}" ry="${ry}" fill="#1F2421" fill-opacity="0.65"${tr}/>`;
+    }
+    if(type==='rope'){
+      // дупка за въже — кръгла, прозрачна (вижда се фонът зад канта)
+      return `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="0.85" fill="#14213D" fill-opacity="0.92" stroke="#1F2421" stroke-opacity="0.35" stroke-width="0.5"/>`;
+    }
+    if(type==='wood'){
+      // правоъгълен обков за дърво
+      return `<rect x="${(cx-2.1).toFixed(1)}" y="${(cy-1.5).toFixed(1)}" width="4.2" height="3" fill="#1F2421" fill-opacity="0.7"/>`;
+    }
+    return '';
+  }
+
+  let dots = '';
+  if(p.top === 'buttons' || p.top === 'rope' || p.top === 'wood'){
+    const insetTopPx = 4*px; // първата/последната дупка на 4см от края
+    const usableW = Math.max(0, w - 2*insetTopPx);
+    const n = Math.max(3, Math.min(14, Math.round(usableW/22)+1));
+    for(let i=0;i<n;i++){
+      const t = i/(n-1);
+      const dx = x0 + insetTopPx + usableW*t;
+      const localTopY = localTopAt(dx);
+      dots += hwMarker(dx, localTopY+Math.min(5*px, bandTop-0.8), p.top, false);
+    }
+  }
+
+  const dimY = y0-18, tickY1 = dimY-6, tickY2 = dimY+6;
+  const dimX = x0-18, tickX1 = dimX-6, tickX2 = dimX+6;
+
+  const weld = weldInfo(p);
+  let weldMark = '';
+  if(weld.needsWeld){
+    const seamY = avgTopY + weld.seamFromTopCm*px;
+    const seamH = Math.max(2, 2*px);
+    weldMark = `
+      <rect x="${innerLeftX.toFixed(1)}" y="${(seamY-seamH/2).toFixed(1)}" width="${(innerRightX-innerLeftX).toFixed(1)}" height="${seamH.toFixed(1)}" fill="#6B7280" fill-opacity="0.55"/>
+      <line x1="${innerLeftX.toFixed(1)}" y1="${seamY.toFixed(1)}" x2="${innerRightX.toFixed(1)}" y2="${seamY.toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.6" stroke-width="0.75" stroke-dasharray="3 2"/>
+    `;
+  }
+
+  // Визуализация на цип/врата — тръгва от локалния вътрешен ръб на канта (следва наклона)
+  let doorMark = '';
+  const innerW = innerRightX-innerLeftX;
+  const zipBandW = Math.max(3, Math.min(6, w*0.025));
+  if(p.door1 && !p.door2){
+    const zx = Math.max(innerLeftX, Math.min(innerRightX, innerLeftX + p.doorLeft*px));
+    const zTop = useFlatTop ? doorTopY : (localTopAt(zx)+bandTop);
+    doorMark = `
+      <rect x="${(zx-zipBandW/2).toFixed(1)}" y="${zTop.toFixed(1)}" width="${zipBandW.toFixed(1)}" height="${(bottomY-zTop).toFixed(1)}" fill="${fillC}" stroke="#1F2421" stroke-opacity="0.15" stroke-width="0.5"/>
+      <line x1="${zx.toFixed(1)}" y1="${zTop.toFixed(1)}" x2="${zx.toFixed(1)}" y2="${bottomY.toFixed(1)}" stroke="#1F2421" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="2.5 2"/>
+      <rect x="${(zx-3).toFixed(1)}" y="${(zTop-2).toFixed(1)}" width="6" height="5" rx="1" fill="#1F2421" fill-opacity="0.85"/>
+    `;
+  } else if(p.door2){
+    const dx0 = Math.max(innerLeftX, Math.min(innerRightX, innerLeftX + p.doorLeft*px));
+    const dx1 = Math.max(innerLeftX, Math.min(innerRightX, innerRightX - p.doorWidth*px));
+    const dxLo = Math.min(dx0,dx1), dxHi = Math.max(dx0,dx1);
+    const zTop0 = useFlatTop ? doorTopY : (localTopAt(dx0)+bandTop);
+    const zTop1 = useFlatTop ? doorTopY : (localTopAt(dx1)+bandTop);
+    const zTopLo = Math.min(zTop0, zTop1);
+    doorMark = `
+      <rect x="${dxLo.toFixed(1)}" y="${zTopLo.toFixed(1)}" width="${(dxHi-dxLo).toFixed(1)}" height="${(bottomY-zTopLo).toFixed(1)}" fill="#FAF8F3" fill-opacity="0.04"/>
+      <rect x="${(dx0-zipBandW/2).toFixed(1)}" y="${zTop0.toFixed(1)}" width="${zipBandW.toFixed(1)}" height="${(bottomY-zTop0).toFixed(1)}" fill="${fillC}" stroke="#1F2421" stroke-opacity="0.15" stroke-width="0.5"/>
+      <rect x="${(dx1-zipBandW/2).toFixed(1)}" y="${zTop1.toFixed(1)}" width="${zipBandW.toFixed(1)}" height="${(bottomY-zTop1).toFixed(1)}" fill="${fillC}" stroke="#1F2421" stroke-opacity="0.15" stroke-width="0.5"/>
+      <line x1="${dx0.toFixed(1)}" y1="${zTop0.toFixed(1)}" x2="${dx0.toFixed(1)}" y2="${bottomY.toFixed(1)}" stroke="#1F2421" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="2.5 2"/>
+      <line x1="${dx1.toFixed(1)}" y1="${zTop1.toFixed(1)}" x2="${dx1.toFixed(1)}" y2="${bottomY.toFixed(1)}" stroke="#1F2421" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="2.5 2"/>
+      <rect x="${(dx0-3).toFixed(1)}" y="${(zTop0-2).toFixed(1)}" width="6" height="5" rx="1" fill="#1F2421" fill-opacity="0.85"/>
+      <rect x="${(dx1-3).toFixed(1)}" y="${(zTop1-2).toFixed(1)}" width="6" height="5" rx="1" fill="#1F2421" fill-opacity="0.85"/>
+    `;
+  }
+
+  // Обков отстрани (ляво/дясно) — показват се само при избор
+  let sideDots = '';
+  const bottomInsetPx = 7*px; // последната дупка спира 7см над долния край
+  const skipCorner = p.top !== 'none'; // ъгълът вече е зает от горния кант
+  if(p.side === 'buttons' || p.side === 'rope' || p.side === 'wood'){
+    const rangeL = Math.max(0, hLeft - bottomInsetPx);
+    const nL = Math.max(2, Math.min(16, Math.round(rangeL/22)+1));
+    for(let i=0;i<nL;i++){
+      if(i===0 && skipCorner) continue;
+      const dy = topLeftY + (rangeL/(nL-1))*i;
+      sideDots += hwMarker(x0+Math.min(5*px, bandLeft-0.8), dy, p.side, true);
+    }
+    const rangeR = Math.max(0, hRight - bottomInsetPx);
+    const nR = Math.max(2, Math.min(16, Math.round(rangeR/22)+1));
+    for(let i=0;i<nR;i++){
+      if(i===0 && skipCorner) continue;
+      const dy = topRightY + (rangeR/(nR-1))*i;
+      sideDots += hwMarker(x0+w-Math.min(5*px, bandRight-0.8), dy, p.side, true);
+    }
+  } else if(p.side === 'zip'){
+    const zipInL = Math.min(3, bandLeft*0.4), zipInR = Math.min(3, bandRight*0.4);
+    const zxL = x0+bandLeft-zipInL, zxR = x0+w-bandRight+zipInR;
+    sideDots += `<line x1="${zxL.toFixed(1)}" y1="${innerTopL.toFixed(1)}" x2="${zxL.toFixed(1)}" y2="${bottomY.toFixed(1)}" stroke="#1F2421" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="2.5 2"/>`;
+    sideDots += `<line x1="${zxR.toFixed(1)}" y1="${innerTopR.toFixed(1)}" x2="${zxR.toFixed(1)}" y2="${bottomY.toFixed(1)}" stroke="#1F2421" stroke-opacity="0.8" stroke-width="1.5" stroke-dasharray="2.5 2"/>`;
+    sideDots += `<rect x="${(zxL-2.5).toFixed(1)}" y="${(innerTopL-1).toFixed(1)}" width="5" height="6" rx="1" fill="#1F2421" fill-opacity="0.85"/>`;
+    sideDots += `<rect x="${(zxR-2.5).toFixed(1)}" y="${(innerTopR-1).toFixed(1)}" width="5" height="6" rx="1" fill="#1F2421" fill-opacity="0.85"/>`;
+  }
+
+  // Кантът (горе+ляво+дясно) е ЕДНА непрекъсната рамка, която следва наклона
+  // навсякъде — вътрешен и външен контур, evenodd fill (като паспарту).
+  const framePath =
+    `M ${x0},${topLeftY.toFixed(1)} L ${(x0+w).toFixed(1)},${topRightY.toFixed(1)} L ${(x0+w).toFixed(1)},${bottomY.toFixed(1)} L ${x0},${bottomY.toFixed(1)} Z ` +
+    `M ${innerLeftX.toFixed(1)},${innerTopL.toFixed(1)} L ${innerRightX.toFixed(1)},${innerTopR.toFixed(1)} L ${innerRightX.toFixed(1)},${innerBottomY.toFixed(1)} L ${innerLeftX.toFixed(1)},${innerBottomY.toFixed(1)} Z`;
+
+  svg.innerHTML = `
+    <defs>
+      <pattern id="camoPattern" width="26" height="22" patternUnits="userSpaceOnUse">
+        <rect width="26" height="22" fill="#6B7A4C"/>
+        <path d="M0,4 Q6,0 12,5 T24,3 L26,8 Q18,10 14,6 T2,10 Z" fill="#4A3B2A"/>
+        <path d="M4,16 Q10,12 16,17 T26,15 L26,22 L0,22 Q2,18 4,16 Z" fill="#3D4A2A"/>
+        <circle cx="20" cy="4" r="3" fill="#4A3B2A"/>
+        <circle cx="6" cy="18" r="2.4" fill="#2E2A20"/>
+      </pattern>
+    </defs>
+    <path d="M ${x0},${topLeftY.toFixed(1)} L ${(x0+w).toFixed(1)},${topRightY.toFixed(1)} L ${(x0+w).toFixed(1)},${bottomY.toFixed(1)} L ${x0},${bottomY.toFixed(1)} Z" fill="rgba(160,82,45,0.06)" stroke="${strokeC}" stroke-width="1.5"/>
+    <rect x="${x0}" y="${(bottomY-apronH).toFixed(1)}" width="${w}" height="${apronH.toFixed(1)}" fill="${fillC}"/>
+    <path d="${framePath}" fill="${fillC}" fill-rule="evenodd" stroke="#1F2421" stroke-opacity="0.15" stroke-width="0.5"/>
+    ${doorMark}
+    ${weldMark}
+    ${sideDots}
+    ${dots}
+
+    <line x1="${x0}" y1="${dimY.toFixed(1)}" x2="${(x0+w).toFixed(1)}" y2="${dimY.toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <line x1="${x0}" y1="${tickY1.toFixed(1)}" x2="${x0}" y2="${tickY2.toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <line x1="${(x0+w).toFixed(1)}" y1="${tickY1.toFixed(1)}" x2="${(x0+w).toFixed(1)}" y2="${tickY2.toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="${(x0+w/2).toFixed(1)}" y="${(dimY-8).toFixed(1)}" font-size="9.5" font-family="IBM Plex Mono, monospace" fill="#FAF8F3" fill-opacity="0.7" text-anchor="middle">ширина ${p.width} см</text>
+
+    <line x1="${dimX.toFixed(1)}" y1="${y0}" x2="${dimX.toFixed(1)}" y2="${(y0+hMax).toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <line x1="${tickX1.toFixed(1)}" y1="${y0}" x2="${tickX2.toFixed(1)}" y2="${y0}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <line x1="${tickX1.toFixed(1)}" y1="${(y0+hMax).toFixed(1)}" x2="${tickX2.toFixed(1)}" y2="${(y0+hMax).toFixed(1)}" stroke="#FAF8F3" stroke-opacity="0.5" stroke-width="1"/>
+    <text x="${(dimX-9).toFixed(1)}" y="${(y0+hMax/2).toFixed(1)}" font-size="9.5" font-family="IBM Plex Mono, monospace" fill="#FAF8F3" fill-opacity="0.7" text-anchor="middle" transform="rotate(-90 ${(dimX-9).toFixed(1)} ${(y0+hMax/2).toFixed(1)})">${p.diffHeights ? `височина Л ${p.heightLeft}/Д ${p.heightRight} см` : `височина ${p.height} см`}</text>
+  `;
+
+  const thicknessLabel = {"0.6":"0.6 ММ","0.8":"0.8 ММ","1.0":"1.0 ММ"}[p.thickness] || p.thickness;
+  let hardwareLabel = 'БЕЗ ОБКОВ';
+  if(p.side === 'zip') hardwareLabel = 'ЦИП';
+  else if(p.top==='buttons'||p.side==='buttons') hardwareLabel = 'ВЪРТЯЩИ КОПЧЕТА';
+  else if(p.top==='rope'||p.side==='rope') hardwareLabel = 'КРЪГЪЛ ЗА ПРИВРЪЗВАНЕ';
+  else if(p.top==='wood'||p.side==='wood') hardwareLabel = 'ПРАВОЪГЪЛЕН ЗА ДЪРВО';
+  document.getElementById('cap-thickness').textContent = `КРИСТАЛ ${thicknessLabel}`;
+  document.getElementById('cap-kant').textContent = `КАНТ · ${(COLOR_NAMES[p.color]||'').toUpperCase()}`;
+  document.getElementById('cap-hardware').textContent = `ОБКОВ: ${hardwareLabel}`;
+}
+
+function readForm(){
+  const diffHeights = document.getElementById('f-diff-heights').checked;
+  document.getElementById('height-single-wrap').classList.toggle('hidden', diffHeights);
+  document.getElementById('height-diff-wrap').classList.toggle('hidden', !diffHeights);
+
+  const heightLeft = parseFloat(document.getElementById('f-height-left').value)||0;
+  const heightRight = parseFloat(document.getElementById('f-height-right').value)||0;
+  const height = diffHeights ? (heightLeft+heightRight)/2 : (parseFloat(document.getElementById('f-height').value)||0);
+
+  const thickness = document.getElementById('f-thickness').value;
+  const borderTop = parseFloat(document.getElementById('f-border-top').value)||0;
+  const autoApron = document.getElementById('f-auto-apron').checked;
+  const apronInput = document.getElementById('f-apron');
+  document.getElementById('apron-field-wrap').classList.toggle('hidden', autoApron);
+  let apron;
+  if(autoApron){
+    const topaCm = PRICE_CONFIG.rollWidth[thickness]*100; // 200см за 0.8/1.0мм, 160см за 0.6мм
+    apron = Math.max(10, Math.round(height - borderTop - topaCm)); // минимум 10см, за да не се влачи кристалът
+    apronInput.value = apron;
+  } else {
+    apron = parseFloat(apronInput.value)||0;
+  }
+
+  const door1 = document.getElementById('f-door1').checked;
+  const door2 = document.getElementById('f-door2').checked;
+  document.getElementById('door-pos-wrap').classList.toggle('hidden', !door1 && !door2);
+  document.getElementById('door-width-wrap').classList.toggle('hidden', !door2);
+
+  return {
+    width: parseFloat(document.getElementById('f-width').value)||0,
+    height: height,
+    diffHeights: diffHeights,
+    heightLeft: heightLeft,
+    heightRight: heightRight,
+    thickness: thickness,
+    top: document.getElementById('f-top').value,
+    side: document.getElementById('f-side').value,
+    qty: parseInt(document.getElementById('f-qty').value)||1,
+    color: document.getElementById('f-color').value,
+    borderTop: borderTop,
+    borderLeft: parseFloat(document.getElementById('f-border-left').value)||0,
+    borderRight: parseFloat(document.getElementById('f-border-right').value)||0,
+    apron: apron,
+    door1: door1,
+    door2: door2,
+    doorLeft: (v=>isNaN(v)?0:v)(parseFloat(document.getElementById('f-door-left').value)),
+    doorWidth: (v=>isNaN(v)?100:v)(parseFloat(document.getElementById('f-door-width').value)),
+  };
+}
+
+function updateAll(){
+  const p = readForm();
+  drawPreview(p);
+  const totalBgn = computePrice(p);
+  const totalEur = totalBgn / PRICE_CONFIG.eurRate;
+  document.getElementById('price-bgn').textContent = totalBgn.toFixed(2);
+  document.getElementById('price-eur').textContent = `(${totalEur.toFixed(2)} €)`;
+
+  const msg = `Здравейте! Искам оферта за завеса:\nШирина: ${p.width} см\nВисочина: ${p.height} см\nДебелина: ${p.thickness} мм\nКант горе/ляво/дясно: ${p.borderTop}/${p.borderLeft}/${p.borderRight} см\nПрестилка: ${p.apron} см\nОбков горе: ${p.top}\nОбков отстрани: ${p.side}\nБрой: ${p.qty}\nОриентировъчна цена: ${totalBgn.toFixed(2)} лв`;
+  window.lastOrderMessage = msg; // запазено за бъдещ ъпгрейд (автоматично изпращане по имейл)
+}
+
+['f-width','f-height','f-thickness','f-top','f-side','f-qty','f-color','f-border-top','f-border-left','f-border-right','f-apron','f-auto-apron','f-door-left','f-door-width','f-diff-heights','f-height-left','f-height-right'].forEach(id=>{
+  document.getElementById(id).addEventListener('input', updateAll);
+});
+
+// "1 цип" и "2 ципа" са взаимно изключващи се
+document.getElementById('f-door1').addEventListener('change', function(){
+  if(this.checked) document.getElementById('f-door2').checked = false;
+  updateAll();
+});
+document.getElementById('f-door2').addEventListener('change', function(){
+  if(this.checked) document.getElementById('f-door1').checked = false;
+  updateAll();
+});
+
+document.getElementById('area-varna').addEventListener('click', function(){
+  document.getElementById('area-varna').classList.add('active');
+  document.getElementById('area-razgrad').classList.remove('active');
+});
+document.getElementById('area-razgrad').addEventListener('click', function(){
+  document.getElementById('area-razgrad').classList.add('active');
+  document.getElementById('area-varna').classList.remove('active');
+});
+
+// Цветно квадратче до селекта - показва избрания цвят на канта
+function updateColorSwatch(){
+  const val = document.getElementById('f-color').value;
+  const swatch = document.getElementById('color-swatch');
+  if(val === 'CAMO'){
+    swatch.classList.add('is-camo');
+    swatch.style.background = '';
+  } else {
+    swatch.classList.remove('is-camo');
+    swatch.style.background = val;
+  }
+}
+document.getElementById('f-color').addEventListener('input', updateColorSwatch);
+updateColorSwatch();
+
+// При клик/фокус в поле с число - маркира съдържанието, за да можеш да пишеш направо
+document.querySelectorAll('#calc input[type="number"]').forEach(inp=>{
+  inp.addEventListener('focus', function(){ this.select(); });
+  inp.addEventListener('mouseup', function(e){ e.preventDefault(); });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Директно скролиране за вътрешните бутони
+document.querySelectorAll('[data-target]').forEach(btn=>{
+  btn.addEventListener('click', function(){
+    const target = document.getElementById(this.dataset.target);
+    if(target){
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+updateAll();
+</script>
+</body>
+</html>
